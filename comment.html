@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Comments</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+	
+<section class="comments">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="form-group comment-form">
+					<label for="exampleFormControlTextarea1">Drop Your Comment</label>
+					<textarea class="form-control" id="exampleFormControlTextarea1" rows="4"></textarea>
+					<button class="btn btn-success">Comment</button>
+				</div>
+				<!-- Contenedor Principal -->
+				<div class="comments-container">
+				  <h1>Comments<a href="#">e-learning.com</a></h1>
+				  <ul id="comments-list" class="comments-list">
+				    <li>
+				      <div class="comment-main-level">
+				        <!-- Avatar -->
+				        <div class="comment-avatar"><img src="http://bit.ly/2QAsRuO" alt=""></div>
+				        <!-- Contenedor del Comentario -->
+				        <div class="comment-box">
+				          <div class="comment-head">
+				            <h6 class="comment-name by-author"><a href="#">Amin Shoukat</a></h6>
+				            <span>hace 20 minutos</span>
+				            <i class="fa fa-reply"></i>
+				            <i class="fa fa-heart"></i>
+				          </div>
+				          <div class="comment-content">
+				            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit omnis animi et iure laudantium vitae, praesentium optio, sapiente distinctio illo? <br>
+				            <button id="reply-btn" class="btn btn-success">Reply</button>
+				            <div class="form-group comment-form" id="comment-reply">
+				            	<br>
+								<textarea class="form-control" id="exampleFormControlTextarea1" placeholder="Type your reply here..." rows="4"></textarea>
+								<button id="comment-btn" class="btn btn-success my-btn">Comment</button>
+							</div>
+				          </div>
+				        </div>
+				      </div>
+				      <!-- Respuestas de los comentarios -->
+				      <ul class="comments-list reply-list">
+				        <li>
+				          <!-- Avatar -->
+				          <div class="comment-avatar"><img src="http://bit.ly/2HMdj4a" alt=""></div>
+				          <!-- Contenedor del Comentario -->
+				          <div class="comment-box">
+				            <div class="comment-head">
+				              <h6 class="comment-name"><a href="#">Sania Malik</a></h6>
+				              <span>hace 10 minutos</span>
+				              <i class="fa fa-reply"></i>
+				              <i class="fa fa-heart"></i>
+				            </div>
+				            <div class="comment-content">
+				              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit omnis animi et iure laudantium vitae, praesentium optio, sapiente distinctio illo?
+				            </div>
+				          </div>
+				        </li>
+				        <li>
+				          <!-- Avatar -->
+				          <div class="comment-avatar"><img src="http://bit.ly/2QAsRuO" alt=""></div>
+				          <!-- Contenedor del Comentario -->
+				          <div class="comment-box">
+				            <div class="comment-head">
+				              <h6 class="comment-name by-author"><a href="#">Amin Shoukat</a></h6>
+				              <span>hace 10 minutos</span>
+				              <i class="fa fa-reply"></i>
+				              <i class="fa fa-heart"></i>
+				            </div>
+				            <div class="comment-content">
+				              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit omnis animi et iure laudantium vitae, praesentium optio, sapiente distinctio illo?
+				            </div>
+				          </div>
+				        </li>
+				      </ul>
+				    </li>
+				    <li>
+				      <div class="comment-main-level">
+				        <!-- Avatar -->
+				        <div class="comment-avatar"><img src="http://bit.ly/2HMdj4a" alt=""></div>
+				        <!-- Contenedor del Comentario -->
+				        <div class="comment-box">
+				          <div class="comment-head">
+				            <h6 class="comment-name"><a href="#">Sania Malik</a></h6>
+				            <span>hace 10 minutos</span>
+				            <i class="fa fa-reply"></i>
+				            <i class="fa fa-heart"></i>
+				          </div>
+				          <div class="comment-content">
+				            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit omnis animi et iure laudantium vitae, praesentium optio, sapiente distinctio illo?
+				          </div>
+				        </div>
+				      </div>
+				    </li>
+				  </ul>
+				</div>
+			</div><!-- End Col -->
+		</div><!-- End Row -->
+	</div><!-- End Container -->
+</section><!-- End Section -->
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script>
+	jQuery(document).ready(function($) {
+		$('#reply-btn').click(function(e) {
+			$(this).hide()
+			$('#comment-reply').css('display', 'block');
+		});
+	});
+
+	jQuery(document).ready(function($) {
+		$('#comment-btn').click(function(e) {
+			/*$(this).hide()*/
+			$('#comment-reply').css('display', 'none');
+			$('#reply-btn').css('display', 'block');
+		});	
+	});
+</script>
+</body>
+</html>
